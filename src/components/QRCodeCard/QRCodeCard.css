@@ -1,0 +1,38 @@
+.qr-code-card {
+  max-width: 20em;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em 1em 2.5em;
+  
+  background-color: var(--white);
+  border-radius: 1.25em;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, .05);
+}
+
+.qr-code-img {
+  border-radius: .625em;
+}
+
+.qr-code-caption {
+  padding: 0 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.qr-code-caption h2 {
+  font-size: 1.375rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.qr-code-caption p {
+  font-size: .9375rem;
+  line-height: 1.4;
+  color: var(--slate-500);
+}

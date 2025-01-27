@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: var(--slate-500);
+  color: var(--white);
+}
+
+.footer-inner {
+  max-width: 768px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer a:hover {
+  color: var(--slate-900);
+}

@@ -9,3 +9,8 @@
 
   user-select: none;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
