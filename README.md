@@ -11,17 +11,14 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### Screenshot
 
-![Screenshot](./src/assets/images/screenshot.png)
+![Screenshot](./src/assets/images/screenshot1.png)
 
 ### Links
 
@@ -40,22 +37,29 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### What I learned
 
-I decided to use this project to get some practice and further improve my grasp of React components.
+I decided to use this project to get some practice and further improve my grasp of compound components in React. My focus was on reusability and creating a template for easily rendering any number of QR code images with consistent stylized formatting.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+![QRCodeCard]('./src/assets/images/screenshot2.png')
+
+The `<QRCodeCard />` component takes a path to an image (presumably a QR code) as a prop, as well as optional nested content to accompany the image. It essentially acts as a wrapper around the semantic `figure`/`figcaption` structure that adds a formatting layer.
+
+As a way of providing context for the QR code, the component is built to accept two types of customized sub-components:
+1. `<QRCodeCard.Title />`
+- renders the nested text in an `<h2>` element
+- represents a short message such as an call to action
+2. `<QRCodeCard.Description />`
+- renders the nested text in a `<p>` element
+- placeholder for a brief explanation of what to expect when scanning the QR code
+
+In this project, I had a chance to work through the process of breaking down a design into separate subparts and creating corresponding compound components in React.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Ultimately, this implementation is overly complex given the original scope of the project. My intention is to continue using projects with relatively simple UIs to focus on code modularity and scalability. I am hoping that this additional practice will prove useful when graduating to more complex projects and full-fledged web applications.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I identified the following possible extensions for the project:
+- __reusability/modularity:__ allowing for easy control of the appearance of the `<QRCodeCard />` component through additional props
+- __functionality:__ adding a button to share the QR code and caption via social media or email
 
 ## Author
 
@@ -64,6 +68,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I started this project after completing the Frontend Developer Career Path on [Scrimba](https://scrimba.com/). The program teaches core web development skills (HTML/CSS/JS with React) through a blend of interactive lessons and projects.
