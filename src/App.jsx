@@ -6,7 +6,7 @@ import QRImg from './assets/images/image-qr-code.png'
 function App() {
   return (
     <main>
-      
+      <h1 className="sr-only">QR Code Component</h1>
       <QRCodeCard qrImgSrc={QRImg}>
         <QRCodeCard.Title>
           Improve your front-end skills by building projects
